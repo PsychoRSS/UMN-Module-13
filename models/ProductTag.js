@@ -20,8 +20,8 @@ ProductTag.init(
       },
     },
     tag_id: {
-      type:DataTypes.INTEGER,
-      refrences:{
+      type: DataTypes.INTEGER,
+      refrences: {
         model: 'tag',
         key: 'id',
       },
@@ -33,7 +33,7 @@ ProductTag.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'productTag',
-  }
+  },
 );
 
 module.exports = ProductTag;

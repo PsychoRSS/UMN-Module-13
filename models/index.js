@@ -14,15 +14,19 @@ Category.hasMany(Product,{
 });
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
-  through: {
-    model:ProductTag,
-  },
-  as: 'all_products'
+  through: "productTag",
+  inverse: {
+    as: 'all_products_price'
+  }
+  
 }) ;
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product,{
   through: 'productTag',
-  as: 'tagged_product',
+  inverse: {
+    as: 'tagged_product',
+  }
+  
 });
 
 

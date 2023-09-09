@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
     res.status(200).json(allTags);
   } catch (err) {
     res.status(500).json(err);
+    console.log(err)
   }
   // find all tags
   // be sure to include its associated Product data
