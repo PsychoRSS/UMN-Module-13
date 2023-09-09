@@ -7,6 +7,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/',async (req, res) => {
   try {
     const allProducts = await Product.findAll({
+            // learnig assistent helped me figure out the through commant
       include: [{model: Category} ,{model:Tag, through: ProductTag}]
     })
     res.status(200).json(allProducts);
