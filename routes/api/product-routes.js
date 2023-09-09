@@ -35,8 +35,7 @@ router.get('/:id', async(req, res) => {
 });
 
 // create new product
-router.post('/', async(req, res) => {
-
+router.post('/', (req, res) => {
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -128,3 +127,4 @@ router.delete('/:id',async (req, res) => {
 });
 
 module.exports = router;
+1
